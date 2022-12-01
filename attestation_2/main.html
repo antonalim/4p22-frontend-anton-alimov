@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Страница регистрации</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+</head>
+<body>
+<header class="header">
+  <div class="header__items">
+    <img src="images/1280px-logo.jpg" class="header__logo">
+    <span class="logo-text">PCS Frontend</span>
+  </div>
+  <div class="header__items">
+    <button class="header__button" id="sign-up-button" onclick="signUp()">Регистрация</button>
+    <button class="header__button" id="sign-in-button"onclick="signIn()">Вход</button>
+  </div>
+</header>
+<div class="content">
+  <form class="form" id="sign-up-form" onsubmit="register(); return false;" hidden>
+    <div class="form__content">
+      <h1 class="form__title">Вход</h1>
+      <label for="sign-up-email" class="form__label required">Email</label>
+      <span class="form__error" id="email-error" hidden></span>
+      <input type="text" id="sign-up-email" name="email" placeholder="Email" class="form__text-input">
+      <label for="password" class="form__label required">Пароль</label>
+      <span class="form__error" id="password-error" hidden></span>
+      <input type="text" id="sign-up-password" name="password" placeholder="Введите пароль" class="form__text-input">
+      <label for="repeat-password" class="form__label required">Подтверждение пароля</label>
+      <span class="form__error" id="repeat-password-error" hidden></span>
+      <input type="text" id="repeat-password" name="repeat-password" placeholder="Подтвердите пароль"
+             class="form__text-input">
+      <h3 class="form__label">Пол</h3>
+      <div class="form__checkbox-block">
+        <input type="radio" id="man" name="man" checked>
+        <label for="man" class="form__label form__radio-label">Мужчина</label>
+      </div>
+      <div class="form__checkbox-block">
+        <input type="radio" id="woman" name="woman">
+        <label for="woman" class="form__label form__radio-label">Женщина</label>
+      </div>
+      <label for="about" class="form__label">О себе</label>
+      <textarea id="about" name="about" rows="6" class="form__text-input form__about" placeholder="Расскажите о себе"></textarea>
+      <div class="form__checkbox-block">
+        <input type="checkbox" id="agreement" name="agreement" checked>
+        <label for="agreement" class="form__label">Я согласен получать обновления на почту</label>
+      </div>
+      <button type="submit" class="form__submit-button">Регистрация</button>
+    </div>
+  </form>
+  <form class="form" id="sign-in-form" hidden>
+    <div class="form__content">
+      <h1 class="form__title">Вход</h1>
+      <label for="email" class="form__label">Email</label>
+      <input type="text" id="email" name="email" placeholder="Email" class="form__text-input">
+      <label for="password" class="form__label">Пароль</label>
+      <input type="text" id="password" name="password" placeholder="Введите пароль" class="form__text-input">
+      <button type="submit" class="form__submit-button submit-button-sign-in">Войти</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
